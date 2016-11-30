@@ -1,0 +1,12 @@
+{
+	"name": "infrajs/errors",
+	"homepage":"https://github.com/infrajs/access",
+	"description":"Работа с ошибками php",
+	"license": "GPL3",
+	"autoload": {
+		"psr-4": { "infrajs\\access\\": "" }
+	},
+	"require":{
+		"infrajs/access":"~1"
+	}
+}

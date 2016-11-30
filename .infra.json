@@ -1,0 +1,7 @@
+{
+	"require":"infra.php",
+	"conf":"infrajs\\error\\Error",
+	"test": false,
+	"debug": true,
+	"admin": false
+}
