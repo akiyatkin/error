@@ -1,10 +1,10 @@
 {
-	"name": "infrajs/errors",
-	"homepage":"https://github.com/infrajs/access",
+	"name": "akiyatkin/error",
+	"homepage":"https://github.com/akiyatkin/error",
 	"description":"Работа с ошибками php",
 	"license": "GPL3",
 	"autoload": {
-		"psr-4": { "infrajs\\access\\": "" }
+		"psr-4": { "akiyatkin\\error\\": "" }
 	},
 	"require":{
 		"infrajs/access":"~1"
