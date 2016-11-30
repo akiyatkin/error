@@ -1,6 +1,6 @@
 <?php
 
-namespace infrajs\error;
+namespace akiyatkin\error;
 
 class Error {
 	public static $conf = array(
