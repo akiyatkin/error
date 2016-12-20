@@ -1,18 +1,20 @@
 # Работа с ошибка php
 
+Это простое расширение для infrajs реализующе простую логику. Если сайт работает на продакшине ошибки php не должны попадать в вывод и если сайт находится в разработке все ошибки должны показываться включай Notice. 
+Расширение устанавливается автоматически с [infrajs/router](https://github.com/infrajs/router) и у него самая низкоуровневая интеграция. Оно подключается автоматически сразу после [infrajs/access](https://github.com/infrajs/access)
 
-Это простое расширение для infrajs реализующе простую логику. 
+## Установка через composer
 
-Если сайт работает на продакшине ошибки php не должны попадать в вывод. 
-
-```php
-ini_set('display_errors', -1);
+``` {
+"require":{
+	akiyatkin/error":"~1" 
+}
 ```
 
-И наоборт если сайта в разработке все ошибки должны быть видны.
+## Использование
 
 ```php
-ini_set('error_reporting', E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+use akiyatkin/error/Error;
+
+Error::init();
 ```

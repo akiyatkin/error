@@ -1,7 +1,6 @@
 {
-	"require":"infra.php",
 	"conf":"akiyatkin\\error\\Error",
 	"test": false,
 	"debug": true,
-	"admin": false
+	"admin": true
 }

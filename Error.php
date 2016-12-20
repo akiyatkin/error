@@ -15,14 +15,15 @@ class Error {
 				($conf['debug'] && Access::isDebug())||
 				($conf['admin'] && Access::isAdmin());
 		if ($is) {
-			ini_set('error_reporting', E_ALL & ~E_DEPRECATED);
-			ini_set('display_errors', 1);
-			ini_set('display_startup_errors', 1);
+			error_reporting(E_ALL & ~E_DEPRECATED);
+			ini_set('display_errors', 'On');
+			ini_set('display_startup_errors', 'On');
 			header('display_errors: true');
 		} else {
-			ini_set('display_errors', -1);
-			ini_set('display_startup_errors', -1);
-			header('display_errors: false');
+			error_reporting(0); //TODO вынести в опции... когда будут проверяться логи.
+			ini_set('display_errors', 'Off');
+			ini_set('display_startup_errors', 'Off');
+			header('display_errors: Off');	
 		}
 	}
 }
