@@ -18,3 +18,15 @@ use akiyatkin/error/Error;
 
 Error::init();
 ```
+
+## Конфиг
+Указано в каком режиме показывать ошибки, а в каком скрывать. И ```show``` ловить ли ошибки с помощью ```set_error_handler```
+
+```json
+{
+	"test": false,
+	"debug": true,
+	"admin": false,
+	"show": true
+}
+```
