@@ -29,7 +29,7 @@ class Error {
 				});
 			}
 		} else {
-			error_reporting(0); //TODO вынести в опции... когда будут проверяться логи.
+			//error_reporting(0); //TODO вынести в опции... когда будут проверяться логи.
 			ini_set('display_errors', 'Off');
 			ini_set('display_startup_errors', 'Off');
 			header('display_errors: Off');	
