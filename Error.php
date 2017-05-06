@@ -5,7 +5,7 @@ use infrajs\access\Access;
 
 class Error {
 	public static $conf = array(
-		'test' => false,
+		'test' => true,
 		'debug' => true,
 		'admin' => false,
 		'show' => false
@@ -16,16 +16,13 @@ class Error {
 				($conf['debug'] && Access::isDebug() && !Access::isAdmin())||
 				($conf['admin'] && Access::isAdmin());
 		if ($is) {
+
 			error_reporting(E_ALL & ~E_DEPRECATED);
 			ini_set('display_errors', 'On');
 			ini_set('display_startup_errors', 'On');
-			header('display_errors: true');
-
 			if ($conf['show']) {
 				set_error_handler(function ($errno, $errmsg, $file, $line) {
-				    
 				    echo "errno: $errno\ntext: $errmsg\nfile: $file\nline: $line\n <br>";
-				    //exit;
 				});
 			}
 		} else {
