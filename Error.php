@@ -4,12 +4,7 @@ namespace akiyatkin\error;
 use infrajs\access\Access;
 
 class Error {
-	public static $conf = array(
-		'test' => true,
-		'debug' => true,
-		'admin' => false,
-		'show' => false
-	);
+	public static $conf = array( );
 	public static function init(){
 		$conf = Error::$conf;
 		$is = 	($conf['test'] && Access::isTest())||
@@ -26,7 +21,7 @@ class Error {
 				});
 			}
 		} else {
-			error_reporting(0); //TODO вынести в опции... когда будут проверяться логи.
+			//error_reporting(0); //TODO вынести в опции... когда будут проверяться логи.
 			ini_set('display_errors', 'Off');
 			ini_set('display_startup_errors', 'Off');
 			header('display_errors: Off');	
