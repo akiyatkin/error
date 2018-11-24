@@ -4,7 +4,7 @@ use infrajs\access\Access;
 
 
 
-Access::admin(true);
+Access::debug(true);
 
 $ans = array();
 $src = ini_get("error_log");
