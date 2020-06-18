@@ -6,9 +6,7 @@ use infrajs\access\Access;
 class Error {
 	public static $conf = array( );
 	public static function init(){
-		$conf = Error::$conf;
-		$is = ($conf['showindebug'] && Access::isDebug());
-
+		$is = Access::isTest();
 		if ($is) {
 			error_reporting(E_ALL & ~E_DEPRECATED);
 			ini_set('display_errors', 'On');

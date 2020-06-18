@@ -1,4 +1,3 @@
 {
-	"conf":"akiyatkin\\error\\Error",
-	"showindebug": true
+	"conf":"akiyatkin\\error\\Error"
 }
